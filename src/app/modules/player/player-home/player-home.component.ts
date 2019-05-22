@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerService } from 'src/app/shared/services/player/player.service';
 
 @Component({
   selector: 'app-player-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playerService: PlayerService) { }
+
+  allPlayers:any;
 
   ngOnInit() {
+    // this.playerService.getAllPlayers().subscribe(result => {
+    //   console.log(result);
+      
+    // });
+    this.playerService.getAllPlayers().subscribe(actionArray => {
+      console.log(actionArray);
+      
+    });
   }
 
 }

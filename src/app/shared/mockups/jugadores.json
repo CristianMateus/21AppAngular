@@ -1,0 +1,14 @@
+{
+    "'jugadores'":[
+        {
+            "edad": 12,
+            "foto": "https://s3.amazonaws.com/filestore.rescuegroups.org/6685/pictures/animals/9385/9385151/63078342_385x385.jpg",
+            "idUsuario": "1033792101",
+            "partidosEmpatados": 0,
+            "partidosGanados": 0,
+            "partidosJugados": 0,
+            "partidosPerdidos": 0,
+            "posicion": 1
+        }
+    ]
+}

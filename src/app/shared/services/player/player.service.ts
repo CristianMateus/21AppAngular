@@ -16,7 +16,7 @@ export class PlayerService {
 
   constructor(db: AngularFireDatabase, private firestore: AngularFirestore) {
     // Lists:
-    this.listPlayers = db.list('jugador').valueChanges();
+    this.listPlayers = db.list('usuarios').valueChanges();
   }
 
   // public getAllPlayers(){
@@ -24,7 +24,8 @@ export class PlayerService {
   // }
 
   getAllPlayers() {
-    return this.firestore.collection('jugadores').get();
+    // return this.firestore.collection('jugadores').get();
+    return this.listPlayers;
   }
 
 }

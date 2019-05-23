@@ -8,5 +8,5 @@ export class Player {
     partidosGanados: number;
     partidosJugados: number;
     partidosPerdidos: number;
-    posicion: EnumPosiciones
+    posicion: number
 }

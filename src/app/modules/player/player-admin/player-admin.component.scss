@@ -1,0 +1,19 @@
+@import "../../../shared/styles/globalWrapppers.scss";
+
+.inputs{
+    display: grid;
+    grid-gap: 1.5em;
+    margin: 0 0 4em;
+}
+
+/deep/ .dropdown{
+    display: grid;
+}
+
+/deep/ .dropdown-menu.show{
+    width: 100%;
+}
+
+button{
+    background-color: #4184a9;
+}

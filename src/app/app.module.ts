@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 // Firebase:
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 
 // Routing:
@@ -14,7 +15,6 @@ import { AppComponent } from './app.component';
 // Own modules:
 import { ModulesModule } from './modules/modules.module';
 import { PlayerService } from './shared/services/player/player.service';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [

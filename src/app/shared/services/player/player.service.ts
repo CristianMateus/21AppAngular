@@ -31,6 +31,8 @@ export class PlayerService {
   insertPlayer(player: Player) {
     this.playerList.push({
       age: player.age,
+      names: player.names,
+      surnames: player.surnames,
       photo: player.photo,
       gamesTied: player.gamesTied,
       gamesWon: player.gamesWon,

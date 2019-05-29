@@ -1,7 +1,9 @@
 <div class="card">
-  <!-- <img class="card-img-top" src={{photo}} alt="Card image cap"> -->
-  <div class="card-img-top"  [style.backgroundImage]="'url(' + photo + ')'"></div>
+  <div class="card-img-top" [style.backgroundImage]="'url(' + photo + ')'"></div>
   <div class="card-body">
+    <div>
+      <h5>{{names}} {{surnames}}</h5>
+    </div>
     <h5 class="card-title"> {{position}} - {{age}}</h5>
     <ul>
       <li>

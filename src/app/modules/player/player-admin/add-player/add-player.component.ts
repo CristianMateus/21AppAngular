@@ -9,6 +9,7 @@ import { Player } from "src/app/shared/models/player";
 
 // Services
 import { PlayerService } from "src/app/shared/services/player/player.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-add-player",
@@ -27,11 +28,13 @@ export class AddPlayerComponent implements OnInit {
   newPlayer: {};
   //Player Data
   $key: string;
+  playerNames: string;
+  playerSurnames: string;
   age: number;
   photo: string;
   position: string;
 
-  constructor(private playerService: PlayerService) {}
+  constructor(private playerService: PlayerService, private router: Router) {}
 
   ngOnInit() {
     this.getListOfPositions();
@@ -40,9 +43,11 @@ export class AddPlayerComponent implements OnInit {
   }
 
   createPlayerTemplate() {
+    this.playerNames = "";
+    this.playerSurnames = "";
     this.age = 15;
     this.position = PlayerPositions.Arquero;
-    this.photo = "";
+    this.photo = "https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/11/11/Recortada/img_fmartinez_20181109-171424_imagenes_lv_getty_gettyimages-1053237084_4_5_2811569930-kfgH-U452803143087cNB-992x558@LaVanguardia-Web.jpg";
   }
 
   /**
@@ -88,6 +93,8 @@ export class AddPlayerComponent implements OnInit {
 
     const savedPlayer = new Player(
       this.age,
+      this.playerNames,
+      this.playerSurnames,
       this.photo,
       gamesTied,
       gamesWon,
@@ -98,5 +105,7 @@ export class AddPlayerComponent implements OnInit {
     console.log(savedPlayer);
 
     this.playerService.insertPlayer(savedPlayer);
+    this.router.navigateByUrl('/jugadores');
+
   }
 }

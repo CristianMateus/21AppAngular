@@ -35,8 +35,9 @@
     <!-- Bottom Container -->
     <div class="bottom-container">
       <ng-container *ngFor="let player of playerList">
-        <app-card [position]="player.position" [photo]="player.photo" [gamesPlayed]="player.gamesPlayed"
-          [gamesTied]="player.gamesTied" [gamesWon]="player.gamesWon" [age]="player.age"></app-card>
+        <app-card [names]="player.names" [surnames]="player.surnames" [position]="player.position"
+          [photo]="player.photo" [gamesPlayed]="player.gamesPlayed" [gamesTied]="player.gamesTied"
+          [gamesWon]="player.gamesWon" [age]="player.age"></app-card>
       </ng-container>
     </div>
     <!-- / Bottom Container -->

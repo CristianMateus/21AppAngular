@@ -1,5 +1,7 @@
 export class Player {
   $key: string;
+  names:string;
+  surnames: string;
   age: number;
   photo: string;
   gamesTied: number;
@@ -10,6 +12,8 @@ export class Player {
 
   constructor(
     age: number,
+    names:string,
+    surnames: string,
     photo: string,
     gamesTied: number,
     gamesWon: number,
@@ -18,6 +22,8 @@ export class Player {
     position: string
   ) {
     this.age = age;
+    this.names = names;
+    this.surnames = surnames;
     this.photo = photo;
     this.gamesTied = gamesTied;
     this.gamesWon = gamesWon;

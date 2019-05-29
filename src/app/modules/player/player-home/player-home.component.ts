@@ -12,21 +12,29 @@ import { Player } from "src/app/shared/models/player";
   styleUrls: ["./player-home.component.scss"]
 })
 export class PlayerHomeComponent implements OnInit {
+  playerList: Player[];
+
   constructor(private playerService: PlayerService) {}
 
-  allPlayers: any[];
-
   ngOnInit() {
-    this.getPlayers();
-    console.log(this.allPlayers);
+    this.getAllPlayers();
   }
-    
-  getPlayers(){
-    this.playerService.getPlayers().snapshotChanges().subscribe(item=>{
-      this.allPlayers = [];
-      item.forEach(element => {
-        this.allPlayers.push(element);
-      })
-    })
+
+  /**
+   * Gets all players
+   */
+  getAllPlayers() {
+    this.playerService
+      .getPlayers()
+      .snapshotChanges()
+      .subscribe(item => {
+        this.playerList = [];
+        item.forEach(element => {
+          let x = element.payload.toJSON();
+          x["$key"] = element.key;
+          this.playerList.push(x as Player);
+          console.log("Todos los jugadores:", this.playerList);
+        });
+      });
   }
 }

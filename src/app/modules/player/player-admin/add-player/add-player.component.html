@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <!-- <form> -->
+      <div>
+        <label>Edad</label>
+        <select class="form-control" id="age" required [(ngModel)]="age" (ngModelChange)="onAgeSelected($event)">
+          <option *ngFor="let age of agesList" [value]="age">{{ age }}</option>
+        </select>
+      </div>
+      <div>
+        <label>Posición</label>
+        <select class="form-control" id="position" required [(ngModel)]="position" (ngModelChange)="onPositionSelected($event)">
+          <option *ngFor="let position of positionList" [value]="position">{{ position }}</option>
+        </select>
+      </div>
+      <div>
+        <label>Photo</label>
+        <input type="text" class="form-control" [(ngModel)]="photo" placeholder="Photo"/>
+      </div>
+      <button type="button" class="btn btn-info" (click)="savePlayer()">Guardar</button>
+    <!-- </form> -->
+  </div>
+</div>

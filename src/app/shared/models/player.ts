@@ -1,12 +1,28 @@
-import { Posiciones as EnumPosiciones } from "../enums/posiciones.enum";
-
 export class Player {
-    edad: number;
-    foto: string;
-    idUsuario: string;
-    partidosEmpatados: number;
-    partidosGanados: number;
-    partidosJugados: number;
-    partidosPerdidos: number;
-    posicion: number
+  $key: string;
+  age: number;
+  photo: string;
+  gamesTied: number;
+  gamesWon: number;
+  gamesLost: number;
+  gamesPlayed: number;
+  position: string;
+
+  constructor(
+    age: number,
+    photo: string,
+    gamesTied: number,
+    gamesWon: number,
+    gamesLost: number,
+    gamesPlayed: number,
+    position: string
+  ) {
+    this.age = age;
+    this.photo = photo;
+    this.gamesTied = gamesTied;
+    this.gamesWon = gamesWon;
+    this.gamesLost = gamesLost;
+    this.gamesPlayed = gamesPlayed;
+    this.position = position;
+  }
 }

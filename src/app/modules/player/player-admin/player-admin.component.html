@@ -1,63 +1,17 @@
+<!-- Component Wrapper -->
 <div class="component-wrapper">
+  <!-- Title -->
   <div class="component-title">
-    <h3>Insertar Jugador</h3>
+    <h3>Administrar Jugadores</h3>
   </div>
+  <!-- / Title -->
+
   <div class="main-container">
-    <!-- Inputs -->
+    <!-- Añadir Jugador -->
     <div class="inputs">
-      <!-- Buscar por Posición -->
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Posición
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
-      <!-- Buscar por Experiencia -->
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Experiencia
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
+      <app-add-player></app-add-player>
     </div>
-    <!-- / Inputs -->
-    <!-- Table -->
-    <table class="table table-hover table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Jugador</th>
-            <th scope="col">Posicion</th>
-            <th scope="col">Experiencia</th>
-            <th scope="col">PJ</th>
-            <th scope="col">PG</th>
-            <th scope="col">PE</th>
-            <th scope="col">PP</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Cristian Mateus</td>
-            <td>Defensa</td>
-            <td>10años</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- / Table -->
+    <!-- Añadir Jugador -->
   </div>
 </div>
+<!-- / Component Wrapper -->

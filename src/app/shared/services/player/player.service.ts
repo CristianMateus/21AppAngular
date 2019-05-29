@@ -12,7 +12,10 @@ import { AngularFirestore } from "@angular/fire/firestore";
 export class PlayerService {
   // Forms:
   formData: Player;
-  listPlayers: AngularFireList<any>;
+  // Player list
+  playerList: AngularFireList<any>;
+  // Selected product
+  // selectedPlayer: Player = new Player();
 
   constructor(
     private db: AngularFireDatabase,
@@ -21,8 +24,35 @@ export class PlayerService {
     this.getPlayers();
   }
 
-  getPlayers() : AngularFireList<any> {
-    return this.listPlayers = this.db.list("jugadores");
+  getPlayers() {
+    return this.playerList = this.db.list("players");
   }
 
+  insertPlayer(player: Player) {
+    this.playerList.push({
+      age: player.age,
+      photo: player.photo,
+      gamesTied: player.gamesTied,
+      gamesWon: player.gamesWon,
+      gamesLost: player.gamesLost,
+      gamesPlayed: player.gamesPlayed,
+      position: player.position
+    });
+  }
+
+  updatePlayer(player: Player) {
+    this.playerList.update(player.$key, {
+      age: player.age,
+      photo: player.photo,
+      gamesTied: player.gamesTied,
+      gamesWon: player.gamesWon,
+      gamesLost: player.gamesLost,
+      gamesPlayed: player.gamesPlayed,
+      position: player.position
+    })
+  }
+
+  deletePlayer($key: string){
+    this.playerList.remove($key);
+  }
 }

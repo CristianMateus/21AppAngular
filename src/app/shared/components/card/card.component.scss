@@ -10,6 +10,12 @@
 .card-img-top{
     border-radius: 9px 9px 0 0;
     height: 10em;
+    overflow: hidden;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-color: black;
+    color: white;
 }
 
 .card-body{

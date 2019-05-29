@@ -12,52 +12,34 @@
           Posición
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <ng-container *ngFor="let position of positionList">
+            <a class="dropdown-item" href="#">{{position}}</a>
+          </ng-container>
         </div>
       </div>
-      <!-- Buscar por Experiencia -->
+      <!-- Buscar por Edad -->
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          Experiencia
+          Edad
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <ng-container *ngFor="let age of agesList">
+            <a class="dropdown-item" href="#">{{age}}</a>
+          </ng-container>
         </div>
       </div>
     </div>
     <!-- / Inputs -->
-    <!-- Table -->
-    <table class="table table-hover table-dark">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Jugador</th>
-            <th scope="col">Posicion</th>
-            <th scope="col">Experiencia</th>
-            <th scope="col">PJ</th>
-            <th scope="col">PG</th>
-            <th scope="col">PE</th>
-            <th scope="col">PP</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Cristian Mateus</td>
-            <td>Defensa</td>
-            <td>10años</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- / Table -->
+
+    <!-- Bottom Container -->
+    <div class="bottom-container">
+      <ng-container *ngFor="let player of playerList">
+        <app-card [position]="player.position" [photo]="player.photo" [gamesPlayed]="player.gamesPlayed"
+          [gamesTied]="player.gamesTied" [gamesWon]="player.gamesWon" [age]="player.age"></app-card>
+      </ng-container>
+    </div>
+    <!-- / Bottom Container -->
   </div>
+
 </div>

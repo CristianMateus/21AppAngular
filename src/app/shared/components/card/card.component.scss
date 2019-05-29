@@ -1,0 +1,22 @@
+.card{
+    width: 100%;
+}
+
+.card-body{
+    background-color: #343a40;
+    color: whitesmoke
+}
+
+.card-img-top{
+    border-radius: 9px 9px 0 0;
+    height: 10em;
+}
+
+.card-body{
+    border-radius: 0 0 9px 9px;
+}
+
+.bottom-button{
+    display: flex;
+    justify-content: center;
+}

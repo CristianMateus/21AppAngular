@@ -18,7 +18,7 @@ import { PlayerService } from './shared/services/player/player.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

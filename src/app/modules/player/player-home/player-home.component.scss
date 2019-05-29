@@ -3,7 +3,14 @@
 .inputs{
     display: grid;
     grid-gap: 1.5em;
-    margin: 0 0 4em;
+    margin: 0 0 2em;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 425px) {
+    .inputs{
+        grid-template-columns: 1fr;
+    }
 }
 
 /deep/ .dropdown{
@@ -15,5 +22,18 @@
 }
 
 button{
-    background-color: #4184a9;
+    background-color: #007bff;
+}
+
+.bottom-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1em;
+    max-height: 35em;
+    overflow-y: scroll;
+}
+
+.card-container{
+    margin: 0 auto;
+    margin-bottom: 1em;
 }
